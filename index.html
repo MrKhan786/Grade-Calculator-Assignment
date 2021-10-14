@@ -61,6 +61,10 @@ else if (grade >= 33 && grade < 40) {
         document.getElementById("result").innerHTML="Invalid input <br/> Obtained marks can't be more than total marks";
 
     }
+    else if (grade < 0 ) {
+        document.getElementById("result").innerHTML="Invalid input <br/>Marks can't be negative";
+
+    }
     
 }
 
