@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+            
+Enter Marks obtained: <input type="number" id="mark_obt">
+<br>
+<br>
+Enter Total Marks:    <input type="number" id="total_marks">
+<br>
+<button onclick="calculator()">Calculate Grade</button>
+   <br>
+   <p id="result"></p> 
+    <script>
+function calculator(){
+    
+let mark_obt= document.getElementById("mark_obt").value;
+let total_marks= document.getElementById("total_marks").value;
+
+let grade= (Number(mark_obt) / Number(total_marks))*100
+
+        if (grade >= 80 && grade <= 100) {
+            document.getElementById("result").innerHTML="Spectacular! You've got A-one Grade";
+            
+        }
+            else if (grade >= 70 && grade < 80) {
+                document.getElementById("result").innerHTML="Great! You've got A Grade";
+
+           }
+else if (grade >= 60 && grade < 70) {
+    document.getElementById("result").innerHTML="You've got B Grade";
+
+}
+
+else if (grade >= 50 && grade < 60) {
+    document.getElementById("result").innerHTML="You've got C Grade";
+
+}
+
+else if (grade >= 40 && grade < 50) {
+    document.getElementById("result").innerHTML="You've got D Grade";
+
+}
+else if (grade >= 33 && grade < 40) {
+    document.getElementById("result").innerHTML="You've got E Grade";
+
+
+    }
+    else if (grade >= 0 && grade < 33) {
+        document.getElementById("result").innerHTML="Alas! You've got F Grade";
+
+    }
+    else if (grade > 100 ) {
+        document.getElementById("result").innerHTML="Invalid input <br/> Obtained marks can't be more than total marks";
+
+    }
+    
+}
+
+    </script>
+
+
+
+
+
+</body>
+</html>
